@@ -1,0 +1,215 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: #cececf;
+  font-family: 'Poppins', sans-serif;
+}
+
+.card {
+  background: transparent; /* 🔥 quita el blanco */
+  padding: 20px;
+  border-radius: 16px;
+  width: 250px;
+  min-width: 250px;
+  text-align: center;
+
+  transition: all 0.35s ease;
+  flex-shrink: 0;
+}
+
+/* SECCIONES */
+.section {
+  padding: 60px;
+  text-align: center;
+  background: #cececf;
+}
+
+.dark {
+  background: #cececf;
+  color: #1e293b;
+}
+
+/* ===================== */
+/* SERVICIOS */
+/* ===================== */
+
+
+
+
+/* FONDO GRIS */
+.gray-bg {
+  background: #cececf;
+}
+
+/* CONTENEDOR */
+.services-grid {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+  
+
+  flex-wrap: nowrap !important; /* 🔥 fuerza horizontal */
+}
+
+/* CARDS */
+.card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  width: 250px;
+  min-width: 250px; /* 🔥 evita salto a vertical */
+  text-align: center;
+
+  transition: all 0.35s ease;
+  flex-shrink: 0; /* 🔥 evita que se deformen */
+}
+
+/* ANIMACIÓN */
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* ICONOS */
+.icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+
+  filter: brightness(0) saturate(100%) invert(27%) sepia(32%) saturate(846%) hue-rotate(175deg) brightness(90%) contrast(90%);
+  transition: transform 0.3s ease;
+}
+
+.card:hover .icon {
+  transform: scale(1.15);
+}
+
+/* animación completa */
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* ICONOS */
+.icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  filter: brightness(0) saturate(100%) invert(27%) sepia(32%) saturate(846%) hue-rotate(175deg) brightness(90%) contrast(90%);
+  transition: transform 0.3s ease;
+}
+
+.card:hover .icon {
+  transform: scale(1.1);
+}
+
+/* ===================== */
+/* PRODUCTOS */
+/* ===================== */
+
+.products {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
+
+/* imagen */
+.product-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+/* animación completa */
+.product-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.product-card:hover img {
+  transform: scale(1.1);
+}
+
+/* BOTÓN */
+.btn-product {
+  margin-top: 12px;
+  padding: 10px 20px;
+  background: #1F4F7A;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.product-card:hover .btn-product {
+  background: #163a5a;
+  transform: scale(1.05);
+}
+
+/* ===================== */
+/* PASOS */
+/* ===================== */
+
+.steps {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.step div {
+  background: #1F4F7A;
+  color: #cececf;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  line-height: 40px;
+  margin: auto;
+}
+
+/* ===================== */
+/* WHATSAPP */
+/* ===================== */
+
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  padding: 12px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+.whatsapp-btn img {
+  width: 35px;
+}

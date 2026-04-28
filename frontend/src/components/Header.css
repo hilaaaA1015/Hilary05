@@ -1,0 +1,139 @@
+.header {
+  width: 100%;
+  font-family: sans-serif;
+}
+
+/* TOP */
+.top-bar {
+  background: #1f4f7a;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  position: relative;
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 40px;
+}
+
+/* NAV */
+.nav a {
+  margin: 0 15px;
+  color: #f2f2f2;
+  text-decoration: none;
+}
+
+.nav.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* BUSCADOR */
+.search-box {
+  position: absolute;
+  right: 223px;
+  width: 0;
+  overflow: hidden;
+  transition: 0.4s;
+}
+
+.search-box.active {
+  width: 300px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+}
+
+.search-box button {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+
+.actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.actions img {
+  width: 22px;
+}
+
+.login {
+  background: linear-gradient(135deg, #f4c430, #ffdd55);
+  padding: 10px 12px;
+  border-radius: 12px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.login:hover {
+  transform: translateY(-2px) scale(1);
+  background: linear-gradient(135deg, #ffd700, #fff176);
+}
+
+
+/* SUBMENU */
+.sub-bar {
+  background: #cececf;
+  display: flex;
+  gap: 15px;
+  padding: 10px 40px;
+}
+
+.sub-bar span {
+  background: #f4c430;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.actions img {
+  width: 22px;
+  filter: brightness(0) invert(1);
+}
+
+
+.actions button:hover {
+  transform: scale(1.2);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.actions button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login {
+  margin-left: 12px;
+  white-space: nowrap; /* evita que crezca raro */
+  flex-shrink: 0; /* no cambia tamaño dentro del flex */
+  min-width: 130px;
+  text-align: center;
+}
