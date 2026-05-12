@@ -43,12 +43,21 @@
 }
 
 /* REDES */
-.socials span {
-  font-size: 22px;
-  margin-right: 10px;
-  cursor: pointer;
+.socials {
+  display: flex;
+  gap: 15px;
 }
 
+.socials img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.socials img:hover {
+  transform: scale(1.2);
+}
 /* BOTTOM */
 .footer-bottom {
   text-align: center;

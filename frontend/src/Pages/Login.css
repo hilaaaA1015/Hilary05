@@ -1,0 +1,363 @@
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins', sans-serif;
+}
+
+/* CONTENEDOR */
+.login-container{
+
+  width:100%;
+  min-height:100vh;
+
+  display:flex;
+
+  background:#cececf;
+}
+
+/* =========================
+   LEFT
+========================= */
+.login-left{
+
+  flex:1;
+
+  background:
+    linear-gradient(
+      rgba(15,23,42,0.82),
+      rgba(15,23,42,0.82)
+    ),
+    url("https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&w=1600");
+
+  background-size:cover;
+  background-position:center;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:60px;
+}
+
+/* OVERLAY */
+.overlay{
+  max-width:500px;
+  color:white;
+}
+
+.overlay h1{
+
+  font-size:58px;
+  line-height:1.1;
+
+  margin-bottom:25px;
+
+  font-weight:800;
+}
+
+.overlay h1 span{
+  color:#f4c430;
+}
+
+.overlay p{
+
+  font-size:19px;
+
+  line-height:1.8;
+
+  color:#d1d5db;
+}
+
+/* =========================
+   RIGHT
+========================= */
+.login-right{
+
+  width:480px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:40px;
+}
+
+/* CARD */
+.login-card{
+
+  width:100%;
+
+  background:white;
+
+  border-radius:30px;
+
+  padding:45px;
+
+  box-shadow:
+    0 15px 40px rgba(0,0,0,0.12);
+}
+
+/* TOP */
+.top{
+  text-align:center;
+  margin-bottom:35px;
+}
+
+.logo-circle{
+
+  width:85px;
+  height:85px;
+
+  margin:auto auto 20px;
+
+  border-radius:50%;
+
+  background:#1f4f7a;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:40px;
+
+  box-shadow:
+    0 10px 25px rgba(31,79,122,0.3);
+}
+
+.top h2{
+  font-size:34px;
+  color:#1e293b;
+}
+
+.top p{
+  margin-top:8px;
+  color:#64748b;
+}
+
+/* INPUTS */
+.input-group{
+  margin-bottom:22px;
+}
+
+.input-group label{
+
+  display:block;
+
+  margin-bottom:9px;
+
+  font-size:14px;
+  font-weight:600;
+
+  color:#334155;
+}
+
+.input-group input{
+
+  width:100%;
+
+  padding:15px 18px;
+
+  border-radius:14px;
+
+  border:2px solid #e2e8f0;
+
+  background:#f8fafc;
+
+  font-size:15px;
+
+  transition:0.3s;
+}
+
+.input-group input:focus{
+
+  outline:none;
+
+  border-color:#1f4f7a;
+
+  box-shadow:
+    0 0 0 4px rgba(31,79,122,0.12);
+}
+
+/* OPCIONES */
+.options{
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  margin-bottom:20px;
+
+  font-size:14px;
+}
+
+.options a{
+
+  color:#1f4f7a;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.remember{
+  display:flex;
+  align-items:center;
+  gap:8px;
+
+  color:#475569;
+}
+
+/* ERROR */
+.error{
+
+  color:#ef4444;
+
+  text-align:center;
+
+  margin-bottom:15px;
+
+  font-size:14px;
+}
+
+/* BOTON LOGIN */
+.login-btn{
+
+  width:100%;
+
+  padding:15px;
+
+  border:none;
+
+  border-radius:15px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #1f4f7a,
+      #163957
+    );
+
+  color:white;
+
+  font-size:16px;
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:0.3s;
+}
+
+.login-btn:hover{
+
+  transform:translateY(-3px);
+
+  box-shadow:
+    0 12px 25px rgba(31,79,122,0.3);
+}
+
+/* DIVIDER */
+.divider{
+
+  margin:28px 0;
+
+  display:flex;
+  align-items:center;
+  gap:15px;
+
+  color:#94a3b8;
+}
+
+.divider::before,
+.divider::after{
+
+  content:"";
+
+  flex:1;
+  height:1px;
+
+  background:#cbd5e1;
+}
+
+/* GOOGLE */
+.google-btn{
+
+  width:100%;
+
+  padding:14px;
+
+  border-radius:14px;
+
+  border:2px solid #e2e8f0;
+
+  background:white;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+
+  cursor:pointer;
+
+  font-weight:600;
+
+  transition:0.3s;
+}
+
+.google-btn img{
+  width:22px;
+}
+
+.google-btn:hover{
+  background:#f8fafc;
+}
+
+/* REGISTRO */
+.register{
+
+  margin-top:28px;
+
+  text-align:center;
+
+  color:#64748b;
+}
+
+.register a{
+
+  margin-left:8px;
+
+  color:#f4c430;
+
+  font-weight:700;
+
+  text-decoration:none;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media(max-width:950px){
+
+  .login-left{
+    display:none;
+  }
+
+  .login-right{
+    width:100%;
+  }
+
+}
+
+@media(max-width:500px){
+
+  .login-card{
+    padding:35px 25px;
+  }
+
+  .top h2{
+    font-size:28px;
+  }
+
+}

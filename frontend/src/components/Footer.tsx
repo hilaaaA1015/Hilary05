@@ -1,5 +1,6 @@
 import "./Footer.css";
 
+
 export default function Footer() {
   return (
     <footer className="footer">
@@ -31,14 +32,14 @@ export default function Footer() {
         </div>
 
         {/* REDES */}
-        <div className="footer-section">
-          <h3>Síguenos</h3>
-          <div className="socials">
-            <span>📘</span>
-            <span>📸</span>
-            <span>🟢</span>
+          <div className="footer-section">
+            <h3>Síguenos</h3>
+            <div className="socials">
+              <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" />
+              <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram" />
+              <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+            </div>
           </div>
-        </div>
 
       </div>
 

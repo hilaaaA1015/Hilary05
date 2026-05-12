@@ -1,50 +1,66 @@
 import { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
 import "./Header.css";
 import logo from "../assets/logo.png";
 
 export default function Header() {
   const [openSearch, setOpenSearch] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <header className="header">
 
       <div className="top-bar">
 
-        {/* LOGO */}
-        <div className="logo">
-          <img src={logo} alt="logo" />
-          <span>Moto Repuestos Avendaño</span>
-        </div>
+  {/* LOGO */}
+  <div className="logo">
+    <img src={logo} alt="logo" />
+    <span>Moto Repuestos Avendaño</span>
+  </div>
 
-        {/* NAV */}
-        <nav className={`nav ${openSearch ? "hide" : ""}`}>
-          <a href="#">Inicio</a>
-          <a href="#">Productos</a>
-          <a href="#">Contacto</a>
-          <a href="#">Acerca de nosotros</a>
-        </nav>
+  {/* CENTRO */}
+  <div className={`center-section ${openSearch ? "search-open" : ""}`}>
 
-        {/* BUSCADOR DESLIZANTE */}
-        <div className={`search-box ${openSearch ? "active" : ""}`}>
-          <input type="text" placeholder="Buscar repuestos..." />
-          <button onClick={() => setOpenSearch(false)}>✖</button>
-        </div>
+    {/* NAV */}
+    <nav className="nav">
+      <Link to="/">Inicio</Link>
+      <Link to="/">Productos</Link>
+      <Link to="/">Contacto</Link>
+      <Link to="/">Acerca de nosotros</Link>
+    </nav>
 
+    {/* BUSCADOR */}
+    <div className={`search-box ${openSearch ? "active" : ""}`}>
+      <input type="text" placeholder="Buscar repuestos..." />
+      <button onClick={() => setOpenSearch(false)}>✖</button>
+    </div>
 
-        {/* ACCIONES */}
-        <div className="actions">
-          <button onClick={() => setOpenSearch(true)}>
-            <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" />
-          </button>
+  </div>
 
-          <button>
-            <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" />
-          </button>
+  {/* ACCIONES */}
+  <div className="actions">
 
-          <button className="login">Iniciar sesión</button>
-        </div>
+    {/* LUPA */}
+    <button onClick={() => setOpenSearch(!openSearch)}>
+      <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" />
+    </button>
 
-      </div>
+    {/* CARRITO */}
+    <button>
+      <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" />
+    </button>
+
+    {/* LOGIN */}
+    <button
+      className="login"
+      onClick={() => navigate("/login")}
+    >
+      Iniciar sesión
+    </button>
+
+  </div>
+
+</div>
 
       {/* SUBMENU */}
       <div className="sub-bar">
@@ -56,5 +72,4 @@ export default function Header() {
 
     </header>
   );
-  
 }

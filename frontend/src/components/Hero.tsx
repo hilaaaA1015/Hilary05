@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import "./Hero.css";
 
-import img1 from "../assets/cascada1.png";
-import img2 from "../assets/cscada2.png";
-import img3 from "../assets/cascada3.png";
+import img1 from "../assets/carrusel1.png";
+import img2 from "../assets/csrrusel2.png";
+import img3 from "../assets/carrusel3.png";
 
 const imagenes = [img1, img2, img3];
 
