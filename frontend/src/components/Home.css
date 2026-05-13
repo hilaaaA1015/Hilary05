@@ -12,6 +12,7 @@ body,
 #root{
   width:100%;
   overflow-x:hidden;
+  scroll-behavior:smooth;
 }
 
 body{
@@ -25,21 +26,22 @@ body{
 ========================= */
 .hero{
   width:100%;
-  height:60vh;
+  min-height:60vh;
 }
 
 /* =========================
    SECCIONES
 ========================= */
 .section{
-  padding:70px 7%;
+  width:100%;
+  padding:80px 7%;
 }
 
 .section h2{
   text-align:center;
-  font-size:36px;
+  font-size:clamp(28px, 5vw, 42px);
   font-weight:700;
-  margin-bottom:45px;
+  margin-bottom:50px;
   color:#1f2937;
 }
 
@@ -55,118 +57,218 @@ body{
 }
 
 /* =========================
-   SERVICIOS
+   TITULO SECCIÓN
 ========================= */
-.services-grid{
-  display:flex;
-  justify-content:center;
-  gap:30px;
-  flex-wrap:wrap;
+.section-title{
+  text-align:center;
+  margin-bottom:60px;
 }
 
-/* CARD */
+.mini-title{
+  background:#1f4f7a;
+  color:white;
+
+  padding:8px 18px;
+
+  border-radius:30px;
+
+  font-size:13px;
+  font-weight:600;
+
+  letter-spacing:1px;
+
+  display:inline-block;
+}
+
+.section-title h2{
+  margin-top:20px;
+  font-size:clamp(30px, 5vw, 46px);
+  color:#1e293b;
+}
+
+.section-title p{
+  margin-top:15px;
+  color:#64748b;
+  font-size:16px;
+}
+
+/* =========================
+   GRID DINÁMICO
+========================= */
+.services-grid,
+.products{
+  width:100%;
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(240px, 1fr));
+
+  gap:28px;
+
+  align-items:stretch;
+}
+
+/* =========================
+   CARDS SERVICIOS
+========================= */
 .card{
-  background:#f6eeee;
+  background:
+    linear-gradient(
+      145deg,
+      #1f4f7a,
+      #2f6da5
+    );
 
-  width:260px;
-  min-width:260px;
+  width:100%;
 
-  padding:30px 25px;
+  min-height:320px;
 
-  border-radius:20px;
+  padding:30px 24px;
+
+  border-radius:24px;
 
   text-align:center;
 
   transition:0.35s ease;
 
   box-shadow:
-    0 6px 18px rgba(0,0,0,0.08);
+    0 8px 20px rgba(0,0,0,0.10);
+
+  position:relative;
+
+  overflow:hidden;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
 }
 
 .card:hover{
   transform:translateY(-8px);
+
   box-shadow:
-    0 15px 30px rgba(0,0,0,0.15);
+    0 18px 35px rgba(0,0,0,0.18);
 }
 
-/* ICONOS */
+/* =========================
+   ICON BOX
+========================= */
+.icon-box{
+  width:80px;
+  height:80px;
+
+  margin:0 auto 20px;
+
+  background:#255b8d;
+
+  border-radius:50%;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  transition:0.35s ease;
+}
+
+.card:hover .icon-box{
+  transform:scale(1.08);
+}
+
+/* =========================
+   ICONOS
+========================= */
 .icon{
-  width:58px;
-  height:58px;
+  width:42px;
+  height:42px;
 
   object-fit:contain;
 
-  margin-bottom:15px;
-
-  filter:
-    brightness(0)
-    saturate(100%)
-    invert(27%)
-    sepia(32%)
-    saturate(846%)
-    hue-rotate(175deg)
-    brightness(90%)
-    contrast(90%);
-
-  transition:0.3s;
+  filter:brightness(0) invert(1);
 }
 
-.card:hover .icon{
-  transform:scale(1.12);
-}
-
-/* TEXOS */
+/* =========================
+   TEXTOS CARD
+========================= */
 .card h3{
-  margin-bottom:10px;
   font-size:22px;
-  color:#1f2937;
+  color:#f8fafc;
+  margin-bottom:12px;
 }
 
 .card p{
-  color:#64748b;
-  line-height:1.5;
+  color:#e2e8f0;
+  line-height:1.6;
   font-size:15px;
+}
+
+/* =========================
+   BOTÓN SERVICIO
+========================= */
+.service-btn{
+  margin-top:22px;
+
+  border:none;
+
+  background:#f4c430;
+  color:#111827;
+
+  padding:11px 22px;
+
+  border-radius:30px;
+
+  font-weight:700;
+  font-size:14px;
+
+  cursor:pointer;
+
+  transition:0.3s ease;
+}
+
+.service-btn:hover{
+  background:#ffcf1f;
+  transform:scale(1.05);
 }
 
 /* =========================
    PRODUCTOS
 ========================= */
-.products{
-  display:flex;
-  justify-content:center;
-  gap:28px;
-
-  flex-wrap:wrap;
-}
-
-/* PRODUCT CARD */
 .product-card{
-  background:#fff;
+  background:#ffffff;
 
-  width:260px;
+  width:100%;
 
-  padding:22px;
+  border-radius:24px;
 
-  border-radius:22px;
+  padding:24px;
 
   text-align:center;
 
   transition:0.35s ease;
 
   box-shadow:
-    0 6px 20px rgba(0,0,0,0.08);
+    0 8px 20px rgba(0,0,0,0.08);
+
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+
+  min-height:360px;
 }
 
 .product-card:hover{
   transform:translateY(-10px);
+
   box-shadow:
     0 18px 35px rgba(0,0,0,0.18);
 }
 
-/* IMAGEN */
+/* =========================
+   IMAGEN PRODUCTO
+========================= */
 .product-card img{
   width:100%;
-  height:180px;
+  height:200px;
 
   object-fit:contain;
 
@@ -174,23 +276,29 @@ body{
 }
 
 .product-card:hover img{
-  transform:scale(1.08);
+  transform:scale(1.05);
 }
 
-/* TITULO */
+/* =========================
+   TITULO PRODUCTO
+========================= */
 .product-card h3{
-  margin-top:12px;
+  margin-top:18px;
+
   font-size:20px;
+
   color:#1f2937;
 }
 
-/* BOTÓN */
+/* =========================
+   BOTÓN PRODUCTO
+========================= */
 .btn-product{
-  margin-top:16px;
+  margin-top:20px;
 
   border:none;
 
-  padding:11px 20px;
+  padding:12px 22px;
 
   border-radius:30px;
 
@@ -235,7 +343,7 @@ body{
 
   z-index:999;
 
-  transition:0.3s;
+  transition:0.3s ease;
 }
 
 .whatsapp-btn:hover{
@@ -247,7 +355,24 @@ body{
 }
 
 /* =========================
-   RESPONSIVE
+   TABLETS
+========================= */
+@media(max-width:1024px){
+
+  .section{
+    padding:70px 5%;
+  }
+
+  .services-grid,
+  .products{
+    grid-template-columns:
+      repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+}
+
+/* =========================
+   MOBILE
 ========================= */
 @media(max-width:768px){
 
@@ -255,157 +380,65 @@ body{
     padding:60px 20px;
   }
 
-  .section h2{
-    font-size:28px;
+  .services-grid,
+  .products{
+    grid-template-columns:1fr;
   }
 
   .card,
   .product-card{
-    width:100%;
-    max-width:340px;
+    max-width:420px;
+    margin:auto;
+  }
+
+  .section h2{
+    margin-bottom:35px;
+  }
+
+  .product-card img{
+    height:180px;
   }
 
 }
 
 /* =========================
-   TITULO SECCIÓN
+   MOBILE PEQUEÑO
 ========================= */
-.section-title{
-  text-align:center;
-  margin-bottom:55px;
-}
+@media(max-width:480px){
 
-.mini-title{
-  background:#1f4f7a;
-  color:white;
+  .section{
+    padding:50px 15px;
+  }
 
-  padding:8px 18px;
+  .card{
+    padding:25px 18px;
+  }
 
-  border-radius:30px;
+  .product-card{
+    padding:20px;
+  }
 
-  font-size:13px;
-  font-weight:600;
+  .card h3,
+  .product-card h3{
+    font-size:18px;
+  }
 
-  letter-spacing:1px;
-}
+  .card p{
+    font-size:14px;
+  }
 
-.section-title h2{
-  margin-top:18px;
-  font-size:42px;
-  color:#1e293b;
-}
+  .btn-product,
+  .service-btn{
+    width:100%;
+  }
 
-.section-title p{
-  margin-top:15px;
-  color:#64748b;
-  font-size:16px;
-}
+  .whatsapp-btn{
+    width:58px;
+    height:58px;
+  }
 
-/* =========================
-   SERVICIOS
-========================= */
-.services-grid{
-  display:flex;
-  justify-content:center;
-  gap:30px;
-  flex-wrap:wrap;
-}
+  .whatsapp-btn img{
+    width:30px;
+  }
 
-/* CARD */
-.card{
-  background:linear-gradient(
-    145deg,
-    #1f4f7a,
-    #2f6da5
-  );
-
-  width:280px;
-
-  padding:35px 28px;
-
-  border-radius:26px;
-
-  text-align:center;
-
-  transition:0.35s ease;
-
-  box-shadow:
-    0 10px 25px rgba(0,0,0,0.08);
-
-  position:relative;
-
-  overflow:hidden;
-}
-
-.card:hover{
-  transform:translateY(-10px);
-  box-shadow:
-    0 18px 35px rgba(0,0,0,0.15);
-}
-
-/* ICON BOX */
-.icon-box{
-  width:90px;
-  height:90px;
-
-  margin:auto auto 22px;
-
-  background:#1f4f7a;
-
-  border-radius:50%;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  transition:0.35s;
-}
-
-.card:hover .icon-box{
-  transform:scale(1.08) rotate(5deg);
-}
-
-/* ICONO */
-.icon{
-  width:45px;
-  filter:brightness(0) invert(1);
-}
-
-/* TITULO */
-.card h3{
-  font-size:25px;
-  color:#f3f5f8;
-  margin-bottom:14px;
-}
-
-/* TEXTO */
-.card p{
-  color:#f3f5f8;
-  line-height:1.6;
-  font-size:15px;
-}
-
-/* BOTON */
-.service-btn{
-  margin-top:22px;
-
-  border:none;
-
-  background:#f4c430;
-  color:black;
-
-  padding:11px 24px;
-
-  border-radius:30px;
-
-  font-weight:700;
-
-  cursor:pointer;
-
-  transition:0.3s;
-}
-
-.service-btn:hover{
-  background:#ffcf1f;
-  transform:scale(1.05);
 }

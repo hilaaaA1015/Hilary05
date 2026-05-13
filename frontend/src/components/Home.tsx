@@ -47,11 +47,6 @@ export default function Home() {
       ¿Qué ofrecemos?
     </h2>
 
-    <p>
-      Todo lo que necesitas para tu moto en un solo lugar.
-      Calidad, seguridad y los mejores repuestos.
-    </p>
-
   </div>
 
   <div className="services-grid">
@@ -87,7 +82,7 @@ export default function Home() {
 
       <div className="icon-box">
         <img
-          src="https://cdn-icons-png.flaticon.com/512/1686/1686898.png"
+          src="https://img.icons8.com/color/96/motorcycle.png"
           className="icon"
           alt="Casco"
         />
@@ -113,7 +108,7 @@ export default function Home() {
 
       <div className="icon-box">
         <img
-          src="https://cdn-icons-png.flaticon.com/512/3063/3063822.png"
+          src="https://cdn-icons-png.flaticon.com/512/1995/1995470.png"
           className="icon"
           alt="Mantenimiento"
         />
@@ -133,6 +128,31 @@ export default function Home() {
       </button>
 
     </div>
+{/* CARD 4 */}
+<div className="card">
+
+  <div className="icon-box">
+    <img
+      src="https://img.icons8.com/color/96/motorcycle.png"
+      className="icon"
+      alt="Moto"
+    />
+  </div>
+
+  <h3>
+    Lubricantes
+  </h3>
+
+  <p>
+    Aceites y productos premium
+    para el cuidado de tu moto.
+  </p>
+
+  <button className="service-btn">
+    Ver más
+  </button>
+
+</div>
 
   </div>
 
@@ -178,7 +198,7 @@ export default function Home() {
       {/* PRODUCTOS INFZ */}
       <section className="section dark">
 
-        <h2>Productos INFZ</h2>
+        <h2>Repuestos</h2>
 
         <div className="products">
 
@@ -238,6 +258,16 @@ export default function Home() {
 
           <div className="product-card">
             <img src={producto3} alt="Kit arrastre" />
+            <h3>Kit de arrastre</h3>
+
+            <button className="btn-product">
+              Ver producto
+            </button>
+          </div>
+
+
+          <div className="product-card">
+            <img src={producto3} alt="Kit de arrastre" />
             <h3>Kit de arrastre</h3>
 
             <button className="btn-product">

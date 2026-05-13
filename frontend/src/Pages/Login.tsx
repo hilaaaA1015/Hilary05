@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Login.css";
 
 const Login: React.FC = () => {
@@ -59,7 +60,7 @@ const Login: React.FC = () => {
             <h2>Iniciar Sesión</h2>
 
             <p>
-              Bienvenido nuevamente
+              Bienvenido
             </p>
 
           </div>
@@ -146,9 +147,9 @@ const Login: React.FC = () => {
 
             ¿No tienes cuenta?
 
-            <a href="#">
+            <Link to="/registrar">
               Registrarse
-            </a>
+            </Link>
 
           </div>
 

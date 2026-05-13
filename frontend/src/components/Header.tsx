@@ -23,10 +23,10 @@ export default function Header() {
 
     {/* NAV */}
     <nav className="nav">
-      <Link to="/">Inicio</Link>
-      <Link to="/">Productos</Link>
-      <Link to="/">Contacto</Link>
-      <Link to="/">Acerca de nosotros</Link>
+      <Link to="//">Inicio</Link>
+      <Link to="//">Productos</Link>
+      <Link to="/Contacto">Contacto</Link>
+      <Link to="/AboutUs">Acerca de nosotros</Link>
     </nav>
 
     {/* BUSCADOR */}

@@ -3,6 +3,7 @@ import Footer from "./components/Footer";
 
 import Home from "./components/Home";
 import Login from "./Pages/Login";
+import Registro from "./Pages/RegistrarCliente";
 
 import {
   Routes,
@@ -20,7 +21,8 @@ export default function App() {
     <>
 
       {/* OCULTAR HEADER EN LOGIN */}
-      {location.pathname !== "/login" && <Header />}
+      {location.pathname !== "/login" && 
+      location.pathname !== "/registrar" && <Header/>}
 
       <Routes>
 
@@ -34,11 +36,17 @@ export default function App() {
           element={<Login />}
         />
 
+         <Route
+          path="/registrar"
+          element={<Registro />}
+        />
+
+
       </Routes>
 
       {/* OCULTAR FOOTER EN LOGIN */}
-      {location.pathname !== "/login" && <Footer />}
-
+      {location.pathname !== "/login" &&
+ location.pathname !== "/registrar" && <Footer />}
     </>
   );
 }
